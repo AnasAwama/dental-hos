@@ -1,0 +1,434 @@
+/* slider Image */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fader {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.fader__slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.fader img {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.ZoomOut{
+    width: "100%";
+    height: "100%";
+    position: relative;
+    animation: Zoom-out 20s ease infinite;
+}
+
+@keyframes Zoom-out {
+    0% {
+        scale: 100%;
+    }
+    25% {
+        scale: 150%;
+    }
+    50% {
+        scale: 175%;
+    }
+    75% {
+        scale: 200%;
+    }
+    100% {
+        scale: 225%;
+    }
+}
+/*body image div*/
+/* .wrapper{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner{
+    border: 2px solid #0000 ;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    object-fit: cover;
+    position: absolute;
+    background-color: rgba(73, 147, 255, 0.5);
+    transform: translateX(-50%);
+} */
+
+/* Treatment code */
+
+.treatmentBoxAlignment{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.treatmentBox{
+  display: flex;             
+  flex-direction: column;    
+  align-items: center;       
+  text-align: center;        
+  border: 3px solid #777575b8 ;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-right: 75px;
+  width: 33cap;
+  height: 25cap;
+  padding-top: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  overflow: hidden;
+}
+
+.treatmentBox:hover{
+  border-color: rgb(59, 59, 255);
+  background-color: rgba(128, 128, 128, 0.136);
+}
+
+.treatmentBox p:nth-child(1){
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.treatmentBox p:nth-child(2){
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #929292;
+}
+
+.treatmentBox p{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.treatmentBoxIcon{
+position:  relative !important ;
+border: 2px solid #00000000 ;
+border-radius: 50%;
+width: 75px;
+height: 75px;
+margin-bottom: 10px;
+margin-left: 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden;
+left: 205px;
+bottom: 40px;
+background-color: #89CFF0;
+transition: border 0.3s ease-in-out;
+}
+.treatmentBox:hover  .treatmentBoxIcon {
+    border: 5px solid white;
+}
+
+.treatmentBox:hover p{
+  position: relative;
+  top: 10%;
+}
+
+.treatmentImageAnimated{
+    width: 290px;
+    height: 290px;
+    position: relative;
+    left: 312px;  /* Start off-screen */
+    bottom: -20px;
+    opacity:  1;
+    object-fit: cover;
+}
+.treatmentBox:hover .treatmentImageAnimated{
+  animation: backImageAnimation 3s forwards;
+}
+
+@keyframes backImageAnimation{
+  from{
+    left: 300px;
+    bottom: -20px;
+    opacity: 0;
+  }
+  to{
+    left: 83px;
+    bottom: 182px;
+    opacity: 0.2;
+  }
+}
+
+  .treatmentBoxIcon img:nth-child(1){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center image inside */
+  width: 75px; /* Slightly smaller than .treatmentBoxIcon */
+  height: 75px;
+  z-index: 1; 
+  opacity: 0.5;
+    
+  }
+
+/* Working Hours and appointment*/
+.workingAndAppointment{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.workingHours{
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.workingHoursTable{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.workingHoursTable tr{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #a6a5a5;
+  text-align: center;
+}
+
+.workingHoursTable tr  td p {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+.appointment{
+  padding-top: 60px;
+  background-color: #89CFF0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.appointmentForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.appointmentForm input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: solid 1px #a6a5a5;
+  width: 250%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  background-size: 200% 100%;
+  background-position: 100% 50%;
+  transition: background-position 3s;
+}
+
+.appointmentForm input::placeholder {
+  color: #949494;
+}
+
+.appointmentForm input:hover::placeholder {
+  color: white;
+}
+/* Hover effect */
+.appointmentForm input:hover {
+  background-image: linear-gradient(to right, rgba(231, 231, 231, 0.748) 50%, rgba(205, 205, 205, 0) 50%);
+  background-position: 0 50%; /* Move the background to left on hover */
+  color: white;
+}
+
+.appointmentForm select{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: solid 1px #a6a5a5;
+  width: 250%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+    background-size: 200% 100%;
+  background-position: 100% 50%;
+  transition: background-position 3s;
+}
+
+.option1 {
+  color: #949494;
+}
+.option1:hover {
+  color: white;
+}
+
+/* Hover effect */
+.appointmentForm select:hover {
+  background-image: linear-gradient(to right, rgba(231, 231, 231, 0.748) 50%, rgba(205, 205, 205, 0) 50%);
+  background-position: 0 50%; /* Move the background to left on hover */
+  color: white;
+}
+input[type="date"]::placeholder{
+  color: #949494;
+}
+.appointmentForm button {
+  border: solid 2px #000000;
+  border-radius: 10%;
+  background: transparent;
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.appointmentForm button:hover {
+  background-color: #37bbf8;
+  color: white;
+  border-color: white;
+}
+
+.imageWidth{
+  width: 100%;
+  height: 100%;
+}
+
+/* services */
+
+.servicesContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.servicesBox{
+  display: flex;             
+  flex-direction: column;    
+  align-items: center;       
+  text-align: center;        
+  border: 3px solid #777575b8 ;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  width: 302.4px;
+  height: 336px;
+  padding-left: 10px;
+  padding-right: 10px;
+  overflow: hidden;
+}
+
+.servicesBox:hover{
+  border-color: rgb(59, 59, 255);
+  background-color: rgba(128, 128, 128, 0.136);
+}
+
+.servicesBoxImage{
+  margin-bottom: 45px;
+}
+.servicesBoxImage img{
+  width: 300px;
+  height: 168px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Hospital information */
+
+.HospitalInfoContainer{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.HospitalInfoBox{
+  background-color: #ececec;
+  display: flex;             
+  flex-direction: column;    
+  align-items: center;       
+  text-align: center;        
+  border-radius: 15px;
+  margin-bottom: 10px;
+  margin-right: 75px;
+  margin-right: 25px;
+  width: 250px;
+  height: 250px;
+  padding-top: 75px;
+  padding-left: 10px;
+  padding-right: 10px;
+border: 2px solid rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+.HospitalInfoBox p{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.HospitalInfoIcon { 
+      width: 115px;
+    height: 115px;
+    position: relative;
+    object-fit: cover;
+  object-position: center;
+    bottom: 40px;
+ }
+
+.HospitalInfoBox:first-child .HospitalInfoIcon{
+  left:10px
+ }
+.HospitalInfoBox:hover{
+  border-color: rgb(59, 59, 255);
+  background-color: rgba(128, 128, 128, 0.136);
+}
+
+.HospitalInfoAnimated{
+    width: 205px;
+    height: 228px;
+    position: relative;
+    left: 312px;  
+    bottom: -20px;
+    opacity:  1;
+    object-fit: cover;
+}
+.HospitalInfoBox:hover .HospitalInfoAnimated{
+  animation: backHospitalImageAnimation 3s forwards;
+}
+
+@keyframes backHospitalImageAnimation{
+  from{
+    left: 300px;
+    bottom: -20px;
+    opacity: 0;
+  }
+  to{
+    left: 60px;
+    bottom: 159px;
+    opacity: 0.05;
+  }
+}

@@ -154,6 +154,7 @@ transition: border 0.3s ease-in-out;
     bottom: -20px;
     opacity:  1;
     object-fit: cover;
+    z-index: -1;
 }
 .treatmentBox:hover .treatmentImageAnimated{
   animation: backImageAnimation 3s forwards;
@@ -307,7 +308,7 @@ input[type="date"]::placeholder{
 }
 
 .appointmentForm button:hover {
-  background-color: #37bbf8;
+  background-color: #c2eaff;
   color: white;
   border-color: white;
 }
@@ -415,7 +416,8 @@ border: 2px solid rgba(255, 255, 255, 0);
     bottom: -20px;
     opacity:  1;
     object-fit: cover;
-}
+z-index: -1;
+  }
 .HospitalInfoBox:hover .HospitalInfoAnimated{
   animation: backHospitalImageAnimation 3s forwards;
 }
@@ -429,6 +431,213 @@ border: 2px solid rgba(255, 255, 255, 0);
   to{
     left: 60px;
     bottom: 159px;
-    opacity: 0.05;
+    opacity: 0.09;
   }
+}
+
+/*clint review*/
+.ClinteReviewBG {
+  background-color: #c2eaff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  height: 350px;
+}
+
+.clinteReviewContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.clinteReview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.clinteReview blockquote {
+  position: relative;
+  width: 600px; /* Adjust as needed */
+  margin: 0; /* Remove default blockquote margin */
+  padding: 0 40px; /* Space so line doesn't overlap text */
+  text-align: center; /* Center the quote text */
+  
+}
+
+/* The horizontal line behind the text */
+.clinteReview blockquote::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 88px;
+  width: 70%;
+  height: 2.5px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  background:linear-gradient(to right,
+  #00A7FF 45%,       /* start with blue */
+    #00A7FF 41%,      /* blue until 40% */
+    transparent 40%,   /* gap begins at 40% */
+    transparent 55.8%,   /* gap until 60% */
+    #00A7FF 55%,      /* blue resumes from 60% */
+    #00A7FF 100%     /* blue until the end */
+  ); /* Line color */
+  transform: translateY(-50%);
+  z-index: 2; /* Behind text */
+}
+
+/* The <q> tag that holds your quote text */
+.clinteReview blockquote q {
+  position: relative; /* So we can place bubble behind it if desired */
+  background: #c2eaff; /* If you want a bubble background behind text (optional) */
+  padding: 0 10px; /* Space so line doesn't cross text */
+  font-style: normal; /* Remove default italic if you like */
+}
+
+/* The bubble icon in the middle of the quote text */
+.clinteReview blockquote q::before {
+  content: no-open-quote;
+  position: absolute;
+  top: 130%;
+  left: 79%;
+  width: 48px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  background: url("./images/speech-bubble.png") center center no-repeat;/*#00A7FF*/
+  background-size: contain; /* Scale the icon to fit 45x56 */
+  z-index: 2;  /* Place behind the quote text */
+}
+
+.clinteReview blockquote q::before {
+  content: "”";
+  top: 129%;       /* adjust this value to move it up or down */
+  left: 80%;       /* adjust to move horizontally */
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: #00A7FF;     /* change the quote color if needed */
+  z-index: 3;
+}
+
+cite {
+  display: block;
+  margin-top: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Footer */
+.quickLinks{
+  background-color: #f6f9f9;
+  margin-top: 20px;
+ 
+}
+.FooterContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.hospitalLogo{
+  width: 350px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.usefullLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.usefullLinksOrder{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+ul{
+  margin-left: 10px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+li{
+  margin-bottom: 2px;
+  margin-right: 10px;
+  color: #000000;
+}
+
+li:hover{
+  color: #00A7FF;
+}
+
+li::marker{
+color: #00A7FF;
+font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.contactAddress{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newsletter{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  object-position: center;
+}
+
+.newsletter form{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.newsletter input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: solid 1px #00A7FF;
+  width: 300px;
+  padding: 10px 50px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.newsletter button{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom:none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  position: relative;
+  right: 50px;
+}
+.newsletter button img{
+  width: 18px;
+  height: 18px;
 }

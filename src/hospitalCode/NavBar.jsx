@@ -22,11 +22,7 @@ export const NavBar = () => {
 
     return (
       <>
-        <nav
-          className={`navbar navbar-expand-lg navbar-light  fixed-top custom-navbar ${
-            navbarScrolled ? "navbarScrolled" : ""
-          }`}
-        >
+        <nav className={`navbar navbar-expand-lg navbar-light  fixed-top custom-navbar ${navbarScrolled ? "navbarScrolled" : ""}`}>
           <div class="container d-flex justify-content-center align-items-center ps-5">
             <Link class="navbar-brand ms-5" to="/">
               Navbar

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "../style/homePage.css";
-
+import {NavBar} from "./NavBar.jsx";
+import {Footer} from "./Footer.jsx";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   EffectFade,
@@ -24,11 +25,29 @@ const images = [
   "https://placehold.co/1920x1003",
 ];
 
+const doctorimages = [
+  "https://placehold.co/300x168",
+  "https://placehold.co/300x168",
+  "https://placehold.co/300x168",
+  "https://placehold.co/300x168",
+  "https://placehold.co/300x168",
+];
+const doctorNames = ["Dr. A", "Dr. B", "Dr. C", "Dr. D", "Dr. E"];
+const doctordegree = ["BDS", "MDS", "BDS", "MDS", "BDS"];
+const doctorspecialization = [
+  "Oral & Maxillofacial surgery",
+  "Oral & Maxillofacial surgery",
+  "Oral & Maxillofacial surgery",
+  "Oral & Maxillofacial surgery",
+  "Oral & Maxillofacial surgery",
+];
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       imageSwip: new Array(images.length).fill(1),
+      doctorimageSwip: new Array(doctorimages.length).fill(1),
     };
   }
 
@@ -103,9 +122,55 @@ class HomePage extends Component {
     );
   };
 
+  doctorSlider = () => {
+    return (
+      <div className="swiperpositions">
+        <Swiper
+          slidesPerView={3}
+          spaceBetween={30}
+          loop={true}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {this.state.doctorimageSwip.map((_, index) => (
+            <SwiperSlide key={index}>
+              <div className="doctorBox">
+                <div className="doctorImage">
+                  <img src={doctorimages[index]} alt="doctor" />
+                </div>
+                <div className="doctorInfo">
+                  <p>
+                    {doctorNames[index]}
+                    <span> {doctordegree[index]}</span>
+                  </p>
+                  <p>{doctorspecialization[index]}</p>
+                  <div className="doctorSocialMedia">
+                    <a href="?">
+                      <i className="fi fi-brands-instagram"></i>{" "}
+                    </a>
+                    <a href="?">
+                      <i className="fi fi-brands-twitter-alt-square"></i>{" "}
+                    </a>
+                    <a href="?">
+                      <i className="fi fi-brands-linkedin"></i>{" "}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    );
+   };
   render() {
     return (
       <body>
+          <NavBar />
         {/* Slider Image */}
         <div>
           <div className="wrapper">
@@ -169,9 +234,13 @@ class HomePage extends Component {
             <img className="imageWidth" src={"https://placehold.co/1920x760"} />
           </div>
         </div>
+        {/* doctors */}
         <div>
           <div>
-            <h1>doctors</h1>
+            <h1>
+              Our Staff&nbsp;<span>Members</span>
+            </h1>
+            <div>{this.doctorSlider()}</div>
           </div>
         </div>
         <div>
@@ -272,7 +341,9 @@ class HomePage extends Component {
         </div>
         <div>
           <div>
-            <h1>TakeCare</h1>
+            <h1>
+              Take&nbsp;<span>Care</span>
+            </h1>
             <img className="imageWidth" src={"https://placehold.co/1920x760"} />
           </div>
         </div>
@@ -287,6 +358,7 @@ class HomePage extends Component {
                   className="HospitalInfoIcon"
                 />
                 <p>20</p>
+                <p>Doctor</p>
                 <img
                   src={require("../style/images/dentist.png")}
                   alt="Dentist"
@@ -300,6 +372,7 @@ class HomePage extends Component {
                   className="HospitalInfoIcon"
                 />
                 <p>100</p>
+                <p>Clinical Room</p>
                 <img
                   src={require("../style/images/dentist-chair.png")}
                   alt="Dental chair"
@@ -313,6 +386,7 @@ class HomePage extends Component {
                   className="HospitalInfoIcon"
                 />
                 <p>300</p>
+                <p>Happy Patient</p>
                 <img
                   src={require("../style/images/dental-record.png")}
                   alt="Dental record"
@@ -339,67 +413,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
-        <footer>
-          <div className="quickLinks">
-            <div className="FooterContainer">
-              <div className="hospitalLogo">
-                <h4>Hopital Logo</h4>
-                <p>
-                  Quisque at magna eu augue semper euismod. Fusce commodo
-                  molestie luctus. Donec mollis nulla ipsum, vitae faucibus dui
-                  dapibus at. Cras ullamcorper eget ipsum vel volutpat.
-                  Phasellus rhoncus in sapien tincidunt mollis.
-                </p>
-                <div>
-                  <p>Trusted by 15000 people</p>
-                </div>
-              </div>
-              <div className="usefullLinks">
-                <h4>usefull links</h4>
-                <div className="usefullLinksOrder">
-                  <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>health info</li>
-                    <li>appointment</li>
-                  </ul>
-                  <ul>
-                    <li>Dental Care</li>
-                    <li>Cleaning Facilities</li>
-                    <li>Whitening Care</li>
-                    <li>Dental Implants</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="contactAddress">
-                <div>
-                  <h4>Contact Address</h4>
-                  <p>Location</p>
-                </div>
-                <div>
-                  <h4>call us</h4>
-                  <p>number</p>
-                </div>
-                <div>
-                  <h4>email us</h4>
-                  <p>email</p>
-                </div>
-              </div>
-            </div>
-            <div className="newsletter">
-              <h1>newsletter Subscription</h1>
-              <form>
-                <input type="text" placeholder="Enter your email" />
-                <button type="submit">
-                  <img
-                    src={require("../style/images/email.png")}
-                    alt="email"/>
-                </button>
-              </form>
-            </div>
-          </div>
-        </footer>
+        <Footer/>
       </body>
     );
   }

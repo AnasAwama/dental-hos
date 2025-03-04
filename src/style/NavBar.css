@@ -1,0 +1,23 @@
+.custom-navbar {
+  background-color: transparent;
+  background-image: linear-gradient(to top, rgb(231, 231, 231), rgba(231, 231, 231, 0.50));
+  background-size: 100% 0;
+  transition: background-size 0.5s ease, box-shadow 0.5s ease;
+}
+
+.custom-navbar.navbarScrolled {
+  background-size: 100% 100%;
+  background-color: rgb(231, 231, 231);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.custom-btn {
+  background-color: #00A7FF !important; /* Custom theme color */
+  color: white !important;
+  border-color: #00A7FF !important;
+}
+.custom-btn:hover {
+  background-color: #0095e6 !important; /* Custom theme color */  
+  border-color: #0095e6 !important;
+  color: white !important;
+}

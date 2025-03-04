@@ -1,0 +1,174 @@
+@import "~@flaticon/flaticon-uicons/css/all/all";
+@import "~@flaticon/flaticon-uicons/css/all/all.css";
+
+/* Footer */
+.quickLinks{
+  background-color: #f6f9f9;
+  margin-top: 20px;
+ 
+}
+.FooterContainer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: -20px;
+  margin-right: 10px;
+}
+
+.hospitalLogo{
+  width: 350px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hospitalLogo p:nth-child(1){
+  font-size: 20px;
+  font-weight: 100;
+  color: #959595;
+}
+
+.hospitalLogo p:nth-child(1) span{
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.usefullLinks{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.usefullLinksOrder{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+ul{
+  margin-left: 10px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+
+li{
+  margin-bottom: 2px;
+  margin-right: 10px;
+  color: #000000;
+}
+
+li:hover{
+  color: #00A7FF;
+}
+
+li::marker{
+color: #00A7FF;
+font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+.contactAddress{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newsletter{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  object-position: center;
+}
+
+.newsletter form{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.newsletter input {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: solid 1px #00A7FF;
+  width: 300px;
+  padding: 10px 50px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.newsletter button{
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom:none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  position: relative;
+  right: 50px;
+}
+.newsletter button img{
+  width: 18px;
+  height: 18px;
+}
+
+.socialMediaIcon{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.socialMediaIcon a{
+  color: #959595;
+  font-size: 25px;
+  padding-top: 10px;
+  border: 2px solid #ededed;
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.socialMediaIcon a:nth-child(3){
+  padding-left: 5px;
+  font-size: 28px;
+}
+.socialMediaIcon a:hover{
+  background-color: #c7e9fc;
+  color:#00A7FF;
+}
+.socialMedia {
+  width: 20px;
+  height: 20px;
+}
+
+.copyRight{
+  background-color: #343434;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.copyRight p{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

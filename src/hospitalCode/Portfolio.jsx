@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../style/Portfolio.css";
 import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
+import { TitleBaner } from "./TitleBaner";
 
 class Portfolio extends Component {
     constructor(props) { 
@@ -14,14 +15,9 @@ class Portfolio extends Component {
             <div>
               <NavBar />
             </div>
-            <div className="PortfolioBoX">
-              <h1>Portfolio</h1>
-              <div>
-                <a href="#">Home</a>
-                <span className="flip-horizontal"> / </span>
-                <span className="">Portfolio</span>
-              </div>
-            </div>
+            <>
+              <TitleBaner />
+            </>
             <div className="PortoflioContainer">
               <div>
                 <button className=" btnCatCustomize">All</button>

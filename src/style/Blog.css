@@ -1,0 +1,103 @@
+.BlogContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.BlogImgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: auto;
+}
+.BlogImgalingment{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    height: auto;
+    min-height: 455px;
+    width: 100%;
+    max-width: 350px;
+    border : 1px solid #959595;
+    background-color: #95959500;
+    overflow: hidden;
+    margin-right: 25px;
+}
+.BlogImgBox img{
+width: 349px;
+}
+
+.BlogImgalingment:hover{
+    border-color: rgb(59, 59, 255);
+    background-color: rgba(128, 128, 128, 0.136);
+}
+
+.DatePosition{
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: absolute;
+    bottom: 296px;
+    height: 38px;
+    width: 130px;
+    background-color: #00A7ff;
+    border: 1px solid #00a6ff00;
+}
+
+.DatePosition p{
+    margin-bottom: 0px;
+    /* color: #e0dfdf; */
+    font-weight: 100;
+    font-size: 17px;
+}
+.DatePosition p span{
+    font-weight: 600;
+}
+
+.BlogTextBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    /* margin-top: 10px; */
+    margin-left: 24px;
+    max-height: auto;
+    max-width: 300px;
+    overflow: visible;
+    word-wrap: break-word;
+}
+
+.BlogTextBox p{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+    overflow-wrap: break-word;
+}
+.BlogTextBox p span{
+    font-weight: 350;
+    color: #959595;
+}
+
+.BlogBodyTextBox {
+    display: block;
+    height: auto;
+    width: 100%; 
+    max-width: 100%; 
+}
+
+.BlogBodyTextBox p{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    color: #959595; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 300px; 
+}

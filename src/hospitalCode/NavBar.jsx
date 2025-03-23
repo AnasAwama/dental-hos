@@ -22,7 +22,11 @@ export const NavBar = () => {
 
     return (
       <>
-        <nav className={`navbar navbar-expand-lg navbar-light  fixed-top custom-navbar ${navbarScrolled ? "navbarScrolled" : ""}`}>
+        <nav
+          className={`navbar navbar-expand-lg navbar-light  fixed-top custom-navbar ${
+            navbarScrolled ? "navbarScrolled" : ""
+          }`}
+        >
           <div class="container d-flex justify-content-center align-items-center ps-5">
             <Link class="navbar-brand ms-5" to="/">
               Navbar
@@ -49,24 +53,24 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li class="nav-item me-3">
-                  <a class="nav-link" href="#">
+                  <Link class="nav-link" to="/about">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item nav-item me-3">
-                  <a class="nav-link" href="#">
+                  <Link class="nav-link" to="/service">
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item nav-item me-3">
-                  <a class="nav-link" href="#">
+                  <Link class="nav-link" to="/blog">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item nav-item me-3">
-                  <a class="nav-link" href="#">
+                  <Link class="nav-link" to="/dentists">
                     Dentist
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item nav-item me-3">
                   <Link class="nav-link" to="/portfolio">
@@ -74,9 +78,13 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <button type="button" class="btn custom-btn btn-sm mt-2">
-                    Small button
-                  </button>
+                  <Link
+                    type="button"
+                    class="btn custom-btn btn-sm mt-2"
+                    to="/appointment"
+                  >
+                    Book appointment
+                  </Link>
                 </li>
               </ul>
             </div>

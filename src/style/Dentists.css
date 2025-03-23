@@ -1,0 +1,206 @@
+.form-inline{
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20px; */
+}
+
+.cardWrapperHight{
+    height: 450px;
+}
+.SpecialistSelect{
+    width: 200px;
+height: 40px;
+color: #959595;
+font-size: 20px;
+font-weight: 300;
+padding-left: 20px;
+}
+
+.LetterButton{
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    color: #959595;
+    font-size: 20px;
+    font-weight: 300;
+    border: none;
+    border-bottom:1px solid #959595;
+    cursor: pointer;
+}
+.LetterButton:hover{
+    /* background-color: #959595; */
+    /* color: #f5f5f5; */
+    border-top: 1px solid #00A7ff;
+    border-right: 1px solid #959595;
+    border-left: 1px solid #959595;
+    border-bottom:none;
+    
+}
+
+/* Doctor box*/
+.cardWrapper {
+    position: relative;
+    display: flow;
+    align-items: center;
+}
+
+.cardBox {
+  display: flex;
+  border: 1px solid #89CFF0;
+  border-radius: 5px;
+  height: 370px; /* Use whole number */
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+  bottom: 58px;
+  clip-path: polygon(0% 1%, 264% 100%, 0% 100%, 0% 0%);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cardBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ADD8E6;
+  clip-path: polygon(0 0, 100% 37%, 100% 100%, 0% 100%);
+  transition: background-color 0.3s ease;
+  z-index: -1; /* Removed */
+}
+
+.card-body-position{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.card-text:last-child {
+    margin-bottom: 40px !important;
+}
+
+.cardImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 450px;
+}
+
+.cardImgTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+    overflow: hidden;
+    border: 5px solid #ADD8E6;
+    border-radius: 100%;
+    transition: border-color 0.3s ease;
+    
+}
+
+.cardWrapper:hover .cardBox {
+  background-color: #89CFF0; /* Change background color on hover */
+  border-color: #89CFF0; /* Change border color on hover */
+}
+
+.cardWrapper:hover .cardImgTop {
+  border-color: #89CFF0; /* Change image border color on hover */
+}
+
+.cardWrapper:hover .cardBox::before{
+    background-color: #89CFF0;
+}
+
+.SocialButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px; 
+  height: 35px;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, margin-right 0.3s ease, width 0.3s ease;
+}
+
+.SocialButton .icon {
+  font-size: 30px;
+  color: #959595;
+  font-weight: 500;
+  transition: content 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.SocialButton .socialMediaSlider {
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  width: 90px;
+  height: 35px;
+  padding-top: 7.5px;
+  padding-left: 5px;
+  margin-left: 35px;
+  position: absolute;
+  z-index: 10;
+}
+
+.SocialButton.clicked {
+  justify-content: flex-start; 
+  margin-right: 100px;
+  padding-left: 8px;
+}
+
+.SocialButton.clicked .icon {
+  font-size: 20px;
+}
+
+.SocialButton.clicked .socialMediaSlider {
+  opacity: 1;
+  transform: translateX(0); /* Slide the slider in */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.SocialButton .socialMediaSlider a {
+  opacity: 0; /* Initially hidden icons */
+  transform: translateY(10px); /* Position off-screen */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.SocialButton.clicked .socialMediaSlider a:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0); /* Slide in the first icon */
+  transition-delay: 0.1s;
+}
+
+.SocialButton.clicked .socialMediaSlider a:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.SocialButton.clicked .socialMediaSlider a:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.socialMediaSlider a i{
+  color: #959595;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.socialMediaSlider a i:hover{
+  color: #89CFF0;
+}

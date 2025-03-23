@@ -170,7 +170,7 @@ class HomePage extends Component {
   render() {
     return (
       <body>
-          <NavBar />
+        <NavBar />
         {/* Slider Image */}
         <div>
           <div className="wrapper">
@@ -248,7 +248,7 @@ class HomePage extends Component {
           <div className="workingAndAppointment">
             <div className="workingHours">
               <h1>
-                working <span>Hours</span>
+                working&nbsp;<span>Hours</span>
               </h1>
               <table className="workingHoursTable">
                 <tr>
@@ -285,29 +285,29 @@ class HomePage extends Component {
             </div>
             <div className="appointment">
               <h1>
-                Book an <span>Appointment</span>
+                Book an&nbsp;<span>Appointment</span>
               </h1>
               <form className="appointmentForm">
                 <input type="text" placeholder="Name" />
                 <input type="text" placeholder="Email" />
                 <input type="text" placeholder="Phone" />
-                <select placeholder="Type of service">
-                  <option className="option1" value="" disabled selected>
+                <select placeholder="Type of service" className="option1">
+                  <option value="" disabled selected>
                     Type of service
                   </option>
                   <option value="actual value 1">Display Text 1</option>
                   <option value="actual value 2">Display Text 2</option>
                   <option value="actual value 3">Display Text 3</option>
                 </select>
-                <select placeholder="staff">
-                  <option className="option1" value="" disabled selected>
+                <select placeholder="staff" className="option1">
+                  <option value="" disabled selected>
                     Staff
                   </option>
                   <option value="actual value 1">Display Text 1</option>
                   <option value="actual value 2">Display Text 2</option>
                   <option value="actual value 3">Display Text 3</option>
                 </select>
-                <input type="date" placeholder="Date" />
+                <input type="date" className="option1" placeholder="Date" />
                 <button type="submit">Submit</button>
               </form>
             </div>
@@ -413,7 +413,7 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </body>
     );
   }

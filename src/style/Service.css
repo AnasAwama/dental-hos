@@ -1,0 +1,194 @@
+.service-container {
+    display: flex;        
+    gap: 20px;            
+    max-width: 1200px;    
+    margin: auto;             
+    padding: 20px;
+}
+.main-content p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #959595;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.side-navigation{
+
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.side-nav{
+    list-style-position: inside; 
+}
+.side-nav li{
+    border-bottom: 2px solid #dddbdb;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.li::marker{
+    color: #4287f5;
+}
+
+a:link {
+    color: #959595;
+    text-decoration: none;
+}
+
+a:hover {
+  color: #4287f5;
+}
+
+a:active {
+  color: #4287f5;
+}
+
+.HeaderTextStyle {
+    font-size: 40px;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.HeaderTextStyle::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 150px; 
+    height: 1.5px;
+    background-color: #dddbdb;
+}
+
+.serviceContainer {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between service items */
+    max-width: 800px; /* Adjust the container width */
+    margin: 0 auto; /* Centering */
+    padding: 20px;
+}
+
+.serviceImgalingment {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    gap: 20px; /* Space between image and text */
+    background: #f9f9f9; /* Light background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.serviceImgBox img {
+    width: 100%; /* Make image responsive */
+    max-width: 300px; /* Keep image at a fixed max width */
+    height: auto;
+    border-radius: 8px; /* Rounded image corners */
+}
+
+.serviceBodyTextBox {
+    flex: 1; /* Allows text box to take remaining space */
+}
+
+.serviceBodyTextBox h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.serviceDay1Class p span{
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.serviceIconBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.iconWidth{
+    width: 60px;
+    height: 60px;
+}
+
+.IconTextStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300 !important;
+    font-size: 25px !important;
+    color: #000000 !important;
+    position: relative;
+    gap: 7px; /* Adjust spacing */
+    width: 30%; /* Ensure it takes full width */
+}
+
+.IconTextStyle::before,
+.IconTextStyle::after {
+    content: "";
+    flex: 1;
+    height: 1.5px;
+    background: #000000; /* Solid color instead of gradient */
+}
+
+.dropCircle{
+   list-style: none; /* Remove default bullet */
+  position: relative;
+  padding-left: 23px; /* Space for custom bullet */
+}
+
+.dropCircle::before {
+  content: ""; /* Empty content */
+  position: absolute;
+  left: -10px;
+  top: 15px;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #00a7ff;
+  border-radius: 50%; /* Makes it a circle */
+}
+
+.accordion-header {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.accordion-content {
+  padding: 10px;
+  background-color: #fff;
+  border:none;
+  /* border: 1px solid #ddd; */
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust as needed */
+}
+
+.accordion-item{
+    border:none !important;
+}
+
+.dropContent{
+    font-size: 20px;
+    font-weight: 300;
+    color: #959595;
+}

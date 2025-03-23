@@ -1,0 +1,42 @@
+.titleBanerBoX{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0px; /* 50px */
+    margin-bottom: 50px;
+    padding-left: 220px;
+    background-color: #f2f2f2;
+    height: 250px;/* 100px */
+}
+.titleBaner{
+    padding-top: 40px;
+}
+.titleBanerBoX div a {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.titleBanerBoX div a:hover {
+    color: #00A7FF;
+}
+
+.titleBanerBoX div span {
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.flip-horizontal{
+font-size: 17px !important;
+font-weight: 500;
+}
+
+.flip-horizontal::before{
+    display: inline-block;
+    transform: scaleX(-1);
+}
